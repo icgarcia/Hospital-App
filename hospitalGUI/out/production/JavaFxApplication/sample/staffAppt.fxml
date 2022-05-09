@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StaffAppt">
+   <top>
+      <AnchorPane id="topPane" prefHeight="60.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label id="topText" layoutX="565.0" layoutY="17.0" text="Appointment Page">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="homeButton" layoutX="65.0" layoutY="18.0" mnemonicParsing="false" onAction="#homePage" text="Back to Home" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane id="centerPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <DatePicker id="dateBar" fx:id="apptDate" layoutX="440.0" layoutY="121.0" prefHeight="25.0" prefWidth="300.0" />
+            <Label layoutX="448.0" layoutY="74.0" text="Select a date for patient appointment">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="confirmationText" fx:id="timeSlot" alignment="CENTER" layoutX="440.0" layoutY="191.0" prefHeight="17.0" prefWidth="300.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="440.0" layoutY="240.0" prefHeight="200.0" prefWidth="300.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="button7" layoutX="210.0" layoutY="73.0" mnemonicParsing="false" onAction="#timeSelect7" prefHeight="25.0" prefWidth="75.0" text="7 AM" />
+                  <Button fx:id="button8" layoutX="38.0" layoutY="13.0" mnemonicParsing="false" onAction="#timeSelect8" prefHeight="25.0" prefWidth="75.0" text="8 AM" GridPane.columnIndex="1" />
+                  <Button fx:id="button9" layoutX="38.0" layoutY="13.0" mnemonicParsing="false" onAction="#timeSelect9" prefHeight="25.0" prefWidth="75.0" text="9 AM" GridPane.columnIndex="2" />
+                  <Button fx:id="button10" mnemonicParsing="false" onAction="#timeSelect10" prefHeight="25.0" prefWidth="75.0" text="10 AM" GridPane.rowIndex="1" />
+                  <Button fx:id="button11" mnemonicParsing="false" onAction="#timeSelect11" prefHeight="25.0" prefWidth="75.0" text="11 AM" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button fx:id="button12" layoutX="38.0" layoutY="73.0" mnemonicParsing="false" onAction="#timeSelect12" prefHeight="25.0" prefWidth="75.0" text="12 PM" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="button1" layoutX="38.0" layoutY="13.0" mnemonicParsing="false" onAction="#timeSelect1" prefHeight="25.0" prefWidth="75.0" text="1 PM" GridPane.rowIndex="2" />
+                  <Button fx:id="button2" layoutX="38.0" layoutY="13.0" mnemonicParsing="false" onAction="#timeSelect2" prefHeight="25.0" prefWidth="75.0" text="2 PM" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="button3" mnemonicParsing="false" onAction="#timeSelect3" prefHeight="25.0" prefWidth="75.0" text="3 PM" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="button4" layoutX="248.0" layoutY="84.0" mnemonicParsing="false" onAction="#timeSelect4" prefHeight="25.0" prefWidth="75.0" text="4 PM" GridPane.rowIndex="3" />
+                  <Button fx:id="button5" layoutX="40.0" layoutY="118.0" mnemonicParsing="false" onAction="#timeSelect5" prefHeight="25.0" prefWidth="75.0" text="5 PM" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="button6" layoutX="40.0" layoutY="15.0" mnemonicParsing="false" onAction="#timeSelect6" prefHeight="25.0" prefWidth="75.0" text="6 PM" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <Button fx:id="confrimButton" layoutX="530.0" layoutY="497.0" mnemonicParsing="false" onAction="#confirmDate" prefWidth="125.0" text="Confrim">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label id="confirmationText" fx:id="confirmationText" alignment="CENTER" layoutX="440.0" layoutY="562.0" prefHeight="17.0" prefWidth="300.0" textFill="GREEN">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <TextField fx:id="email" layoutX="73.0" layoutY="305.0" prefHeight="25.0" prefWidth="250.0" promptText="Patient Email" />
+            <TextField fx:id="name" layoutX="73.0" layoutY="240.0" prefHeight="25.0" prefWidth="250.0" promptText="Patient Name" />
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane id="leftPane" prefHeight="660.0" prefWidth="400.0" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>
